@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Dog Store</title>
+</head>
+<body>
+    <section class="py-10">
+        <h1 class="text-center text-4xl">Dogs around the world</h1>
+        <div class="grid grid-cols-4 gap-4  mt-10">
+            {% for dog in dogs %}
+            <a href={% url "dog.show" dog.id %} class="justify-self-center text-center my-4" target="_blank">
+                <div class="flex justify-center">
+                    <img src="{{ dog.thumbnailUrl }}" height="100" width="200"/>
+                </div>
+                <p>{{ dog.name }}</p>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+</body>
+</html>

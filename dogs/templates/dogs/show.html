@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>{{dog.id}}</title>
+  </head>
+  <body>
+    <section class="py-10 flex justify-center">
+      <div class="w-10/12">
+        <h1 class="text-center text-4xl">{{book.title}}</h1>
+        <div class="flex justify-between mt-10">
+                <div class="w-auto">
+                <img src="{{dog.thumbnailUrl}}" />
+              </div>
+          <div class="flex justify-between">
+            
+            <div class="w-9/12">
+              <p class="text-3xl">Name</p>
+              <p class="text-gray-600 mt-5">{{dog.name}}</p>
+
+              <div class="mt-10">
+                <p class="text-3xl">Age</p>
+                <p class="text-gray-600 mt-5">Total -- ages</p>
+              </div>
+
+              <div class="mt-10">
+                <p class="text-3xl">Origin</p>
+                <p class="text-gray-600 mt-5">-</p>
+              </div>
+
+              <div class="mt-10">
+                <p class="text-3xl">Description</p>
+                <p class="text-gray-600 mt-4">{{book.longDescription}}</p>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
